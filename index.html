@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#222" />
+    <title>2D Car Dodging Game</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas" width="480" height="720" aria-label="Game Canvas" role="img"></canvas>
+
+        <div id="hud">
+            <div id="score-container" aria-live="polite" aria-atomic="true">Score: 0</div>
+            <div id="coins-container" aria-live="polite" aria-atomic="true">Coins: 0</div>
+        </div>
+
+        <div id="fines-notification" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+        <div id="speedometer" aria-label="Speedometer" role="img" aria-live="polite">
+            <div id="speedometer-needle"></div>
+            <div id="speedometer-base"></div>
+        </div>
+
+        <div id="shop" aria-label="Car Shop" role="dialog" aria-modal="true" aria-hidden="true">
+            <h2>Car Shop</h2>
+            <div id="car-grid" role="list"></div>
+            <button id="close-shop" aria-label="Close Shop">Close Shop</button>
+        </div>
+    </div>
+
+    <script type="module" src="constants.js"></script>
+    <script type="module" src="storage.js"></script>
+    <script type="module" src="physics.js"></script>
+    <script type="module" src="player.js"></script>
+    <script type="module" src="enemy.js"></script>
+    <script type="module" src="coin.js"></script>
+    <script type="module" src="ui.js"></script>
+    <script type="module" src="shop.js"></script>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
